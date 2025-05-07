@@ -24,7 +24,7 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/new-repo ./docker-cicd
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/new-repo .
           docker push ${{ secrets.DOCKER_USERNAME }}/new-repo
 
       - name: Set up SSH Key
